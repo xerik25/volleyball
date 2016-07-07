@@ -14,6 +14,8 @@ export class AuthService {
         this.lock.show((error: string, profile: Object, id_token: string) => {
             if (error) {
                 console.log(error);
+            } else {
+                console.log('logged in');
             }
             // We get a profile object for the user from Auth0
             localStorage.setItem('profile', JSON.stringify(profile));
@@ -27,5 +29,6 @@ export class AuthService {
         // the user's profile and token
         localStorage.removeItem('profile');
         localStorage.removeItem('id_token');
+        console.log('logged out');
     }
 }
