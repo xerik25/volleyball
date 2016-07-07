@@ -177,16 +177,16 @@ gulp.task('deploy', function() {
     // Staging
     if (argv.staging) {
 
-        rsyncConf.hostname = ''; // hostname
+        rsyncConf.hostname = ''; // server hostname
         rsyncConf.username = ''; // ssh username
         rsyncConf.destination = ''; // path where uploaded files go
 
         // Production
     } else if (argv.production) {
 
-        rsyncConf.hostname = ''; // hostname
-        rsyncConf.username = ''; // ssh username
-        rsyncConf.destination = ''; // path where uploaded files go
+        rsyncConf.hostname = 'xerik25.com'; // server hostname
+        rsyncConf.username = 'root'; // ssh username
+        rsyncConf.destination = '/var/www/html/volleyball/'; // path where uploaded files go
 
 
         // Missing/Invalid Target
